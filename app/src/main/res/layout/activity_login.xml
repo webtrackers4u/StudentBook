@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/first_step_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="10sp"
+            android:paddingTop="60sp"
+            android:paddingRight="10sp"
+            android:paddingBottom="60sp">
+
+            <ImageView
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:src="@drawable/studentbook_full_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:fontFamily="@font/sacramento_regular"
+                android:gravity="center"
+                android:text="Studentbook"
+                android:textColor="@color/green"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text="Login to continue with studentbook"
+                android:textColor="@color/light_black"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:layout_width="300sp"
+                android:layout_height="60sp"
+                android:layout_marginTop="40sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/username_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:src="@drawable/ic_phone"
+                    android:tint="@color/light_black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/username_icon"
+                    android:orientation="vertical"
+                    app:boxStrokeColor="@color/light_black">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:text="10 digit phone number"
+                        android:textSize="11sp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_number_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:letterSpacing="0.3"
+                        android:maxLength="10" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300sp"
+                android:layout_height="60sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/password_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:src="@drawable/ic_lock"
+                    android:tint="@color/light_black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@id/password_toggle_button"
+                    android:layout_toLeftOf="@id/password_toggle_button"
+                    android:layout_toEndOf="@id/password_icon"
+                    android:layout_toRightOf="@id/password_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:text="Enter 5 digit password"
+                        android:textSize="11sp" />
+
+                    <LinearLayout
+                        android:id="@+id/password_containner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:boxStrokeColor="@color/light_black">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/password_edit_text_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:importantForAutofill="no"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                tools:ignore="LabelFor" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/password_edit_text_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:inputType="numberPassword"
+                                android:maxLength="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/password_edit_text_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/password_edit_text_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/password_edit_text_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:inputType="numberPassword"
+                                android:maxLength="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/password_toggle_button"
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/transparent"
+                    android:drawableBottom="@drawable/password_toggle_button_background"
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progress_indicator"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:layoutDirection="rtl"
+                    android:letterSpacing="-0.01"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="15sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="15sp"
+                    android:text="Sign me in"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textFontWeight="200"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="60sp"
+                    app:icon="@drawable/ic_arrow_pointing_to_right"
+                    app:iconSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forgot_password_button"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="Forgot password?"
+                android:textColor="@color/green"
+                android:textSize="12sp" />
+
+            <View
+                style="@style/Divider.Horizontal"
+                android:layout_width="250sp"
+                android:layout_marginTop="20sp" />
+
+            <TextView
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="Don't have Studentbook account?"
+                android:textColor="@color/light_black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/register_button"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="REGISTER"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

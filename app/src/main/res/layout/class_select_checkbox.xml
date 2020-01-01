@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/toolbar_background">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_question_text"
+        android:paddingLeft="25sp"
+        android:paddingStart="25sp"
+        android:paddingRight="20sp"
+        android:paddingEnd="20sp"
+        android:paddingTop="15sp"
+        android:paddingBottom="15sp"
+        android:layout_marginBottom="1sp"
+        android:id="@+id/title"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+    </TextView>
+</LinearLayout>

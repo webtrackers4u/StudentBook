@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context=".CompleteProfileActivity"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profile_containner">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/profile_header"
+                android:background="@drawable/toolbar_background"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete Profile"
+                    style="@style/headingTextStyle" />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/profile_header"
+                android:background="#f1f1f1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:orientation="vertical">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/member_type_radio_group_background"
+                        android:checkedButton="@id/student_type"
+                        android:id="@+id/user_type_RadioGroup">
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:padding="10sp"
+                            android:layout_margin="5sp"
+                            android:gravity="center"
+                            android:text="Student"
+                            android:background="@drawable/member_type_radio_button_background"
+                            android:drawableTop="@drawable/member_type_student_radio_button_background"
+                            android:textColor="@color/member_type_radio_button_color"
+                            android:id="@+id/student_type"/>
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:padding="5sp"
+                            android:layout_margin="10sp"
+                            android:gravity="center"
+                            android:text="Guardian"
+                            android:background="@drawable/member_type_radio_button_background"
+                            android:drawableTop="@drawable/member_type_guardians_radio_button_background"
+                            android:textColor="@color/member_type_radio_button_color"
+                            android:id="@+id/guardians_type"/>
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:padding="5sp"
+                            android:layout_margin="10sp"
+                            android:gravity="center"
+                            android:text="Teacher"
+                            android:background="@drawable/member_type_radio_button_background"
+                            android:drawableTop="@drawable/member_type_teacher_radio_button_background"
+                            android:textColor="@color/member_type_radio_button_color"
+                            android:id="@+id/teacher_type"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:id="@+id/board_spinner"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/spinner_background"
+                            android:layout_weight="1"/>
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:id="@+id/class_spinner"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/spinner_background"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:id="@+id/email_EditText"
+                        android:background="@drawable/spinner_background"
+                        android:padding="10sp"
+                        android:minHeight="50sp"
+                        android:layout_margin="5sp"/>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:id="@+id/address_EditText"
+                        android:background="@drawable/spinner_background"
+                        android:padding="10sp"
+                        android:minHeight="50sp"
+                        android:layout_margin="5sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="300sp"
+                        android:layout_height="80sp"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_indicator"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="true" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/save_profile_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:layoutDirection="rtl"
+                            android:letterSpacing="-0.01"
+                            android:paddingLeft="20sp"
+                            android:paddingTop="15sp"
+                            android:paddingRight="20sp"
+                            android:paddingBottom="15sp"
+                            android:text="Save Details"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textFontWeight="200"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="60sp"
+                            app:icon="@drawable/ic_arrow_pointing_to_right"
+                            app:iconSize="15sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ViewFlipper>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0sp"
+        android:background="@drawable/toolbar_background"
+        android:translationZ="0sp">
+        <android.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            tools:targetApi="m"
+            android:contentInsetStart="0sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Grade"
+                        style="@style/headingTextStyle" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:button="@null"
+                        android:background="@drawable/circle_acent_background"
+                        android:layout_margin="5sp"/>
+                    <RadioButton
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:button="@null"
+                        android:background="@drawable/circle_acent_background"
+                        android:layout_margin="5sp"/>
+                    <RadioButton
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:button="@null"
+                        android:background="@drawable/circle_acent_background"
+                        android:layout_margin="5sp"/>
+                    <RadioButton
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:button="@null"
+                        android:background="@drawable/circle_acent_background"
+                        android:layout_margin="5sp"/>
+                    <RadioButton
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:button="@null"
+                        android:background="@drawable/circle_acent_background"
+                        android:layout_margin="5sp"/>
+                </RadioGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:text="Five" /><RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:padding="10sp"
+                android:text="Five" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

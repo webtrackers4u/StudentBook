@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Student Book</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home_title">Home</string>
+    <string name="questions_title">Questions</string>
+    <string name="account_title">Account</string>
+
+    <string name="sample_question">What is a sample question? Is this a sample question? Are you sure this is a sample
+        question?
+    </string>
+    <string name="sample_answer">This is a sample answer. sample answer is nothing but a answer where thw value of anser
+        is ignited to do such values.
+    </string>
+
+    <string name="default_customer_rating">Not rated yet.</string>
+    <string name="default_reference_text">No Reference</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="suggestion_title">Suggestion</string>
+    <string name="past_year_title">Past Year</string>
+    <string name="search_question_text">Type keyword for search questions.</string>
+    <string name="loading_placeholder" tools:ignore="ExtraTranslation">Loading...</string>
+
+
+    <string-array name="question_types">
+        <item>Type</item>
+        <item>Descriptive</item>
+        <item>Multipple Choice</item>
+    </string-array>
+
+    <string-array name="question_overall_stars">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="title_activity_registration">Register</string>
+
+</resources>

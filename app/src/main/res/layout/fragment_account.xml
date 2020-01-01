@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20sp">
+                <RelativeLayout
+                    android:layout_width="200sp"
+                    android:layout_height="200sp">
+                    <ImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_account"/>
+                    <LinearLayout
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/circle_acent_background"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:tint="@android:color/white"
+                            android:src="@drawable/ic_camera"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profile_pic"
+                    android:orientation="vertical"
+                    android:paddingLeft="10sp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Nafish Ahmed"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        app:fontFamily="@font/product_sans_bold"
+                        android:id="@+id/title_member_name" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avater"
+                        android:id="@+id/avater"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="10sp"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Account Details"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_phone"
+                            android:tint="@android:color/holo_purple"
+                            android:layout_gravity="center_vertical" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/toolbar_background"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="9876543210"
+                                android:textSize="14sp"
+                                android:textStyle="normal"
+                                android:id="@+id/member_mobile"
+
+                                android:layout_toLeftOf="@id/mobile_edit_button"
+                                android:layout_toStartOf="@id/mobile_edit_button" />
+                            <LinearLayout
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:padding="5sp"
+                                android:id="@+id/mobile_edit_button"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/button_ripple_effect_transparent">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:src="@drawable/ic_edit"
+                                    android:tint="@color/colorAccent" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_board"
+                            android:tint="@android:color/holo_purple"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:id="@+id/member_board"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/toolbar_background"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:text="Board name"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_board"
+                            android:tint="@android:color/holo_purple"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:text="Board name"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:id="@+id/member_class"
+                            android:background="@drawable/toolbar_background"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:paddingLeft="5sp"
+                            android:paddingRight="5sp"
+                            android:paddingTop="10sp"
+                            android:paddingBottom="10sp"
+                            android:text="Board"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:text="CBSE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/type"
+                            android:layout_column="1"
+                            android:textSize="14sp"
+                            android:paddingLeft="5sp"
+                            android:paddingRight="5sp"
+                            android:paddingTop="10sp"
+                            android:paddingBottom="10sp"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="10sp"
+                android:padding="10sp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:text="Personal Information"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"/>
+                    <LinearLayout
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:padding="5sp"
+                        android:id="@+id/personal_info_edit_button"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/button_ripple_effect_transparent">
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:src="@drawable/ic_edit"
+                            android:tint="@color/colorAccent" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_account_circle"
+                            android:tint="@android:color/holo_purple"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:text="John Doe"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:id="@+id/member_name"
+                            android:background="@drawable/toolbar_background"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_email"
+                            android:tint="@android:color/holo_purple"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:text="example@domain.com"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:id="@+id/member_email"
+                            android:background="@drawable/toolbar_background"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/ic_location"
+                            android:tint="@android:color/holo_purple"/>
+
+                        <TextView
+                            android:id="@+id/member_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/toolbar_background"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:text="Streent, Road, City, Sector, Colony, 000000"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--ACTIONS-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="10sp"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/logout_button"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:background="?android:attr/selectableItemBackground">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:src="@drawable/ic_lock_outline"
+                            android:tint="@android:color/holo_red_light"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:layout_marginLeft="15sp"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:textColor="@android:color/holo_red_light"
+                            android:text="Logout" />
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

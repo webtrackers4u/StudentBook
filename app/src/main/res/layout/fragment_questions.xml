@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/rootWindow">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0sp"
+        android:background="@android:color/white">
+        <android.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            tools:targetApi="m"
+            android:contentInsetStart="0sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Questions"
+                            style="@style/headingTextStyle"
+                            android:layout_centerVertical="true"/>
+                        <ImageView
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/ic_musica_searcher"
+                            android:layout_margin="15sp"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackground"
+                            android:id="@+id/header_search_button"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+
+
+                    <RadioGroup
+                        android:checkedButton="@+id/no_type"
+                        android:id="@+id/question_type_radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/no_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="All"
+                            android:textSize="11sp"
+                            android:textColor="@drawable/switch_color"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:paddingLeft="8sp"
+                            android:paddingRight="8sp"
+                            android:paddingTop="3sp"
+                            android:paddingBottom="3sp"
+                            android:background="@drawable/switch_background"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/multiple_choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="Multiple Choice"
+                            android:textSize="11sp"
+                            android:textColor="@drawable/switch_color"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:paddingLeft="8sp"
+                            android:paddingRight="8sp"
+                            android:paddingTop="3sp"
+                            android:paddingBottom="3sp"
+                            android:background="@drawable/switch_background"/>
+
+                        <RadioButton
+                            android:id="@+id/descriptive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="Descriptive"
+                            android:textSize="11sp"
+                            android:textColor="@drawable/switch_color"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:paddingLeft="8sp"
+                            android:paddingRight="8sp"
+                            android:paddingTop="3sp"
+                            android:paddingBottom="3sp"
+                            android:background="@drawable/switch_background"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1000b248">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/subjects_tab"
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:background="@color/transparent"
+                app:tabBackground="@color/transparent"
+                app:tabContentStart="0sp"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorHeight="35sp"
+                app:tabIndicator="@drawable/tab_indicator"
+                app:tabIndicatorColor="#1000b248"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="15sp"
+                app:tabPaddingStart="15sp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/green"
+                app:tabTextColor="@color/light_black"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                android:layout_toLeftOf="@id/more_filter_button">
+
+
+            </com.google.android.material.tabs.TabLayout>
+            <ImageView
+                android:layout_width="18sp"
+                android:layout_height="18sp"
+                android:src="@drawable/ic_sort_order"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15sp"
+                android:layout_marginLeft="8sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/more_filter_button"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/questionRecyclerView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#f0f0f0">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

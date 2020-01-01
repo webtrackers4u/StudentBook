@@ -1,0 +1,128 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--status bar stuff
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#ffffff</item>
+        -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:editTextStyle">@style/RobotoEditTextStyle</item>
+        <item name="autoCompleteTextViewStyle">@style/RobotoAutoCompleteTextViewStyle</item>
+
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+    </style>
+    <style name="RobotoEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+    </style>
+    <style name="RobotoAutoCompleteTextViewStyle" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+    </style>
+    <!--title text appereance-->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!--<item name="android:fontFamily" tools:targetApi="jelly_bean">@font/nunito_semi_bold</item>-->
+    </style>
+    <style name="BottomNavigationViewTextStyleActive">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="BottomNavigationViewTextStyleInactive">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+
+    <!--spinner stuff-->
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">10sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">10sp</item>
+        <item name="android:paddingRight">10sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="headingTextStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginLeft">15sp</item>
+        <item name="android:paddingTop">12sp</item>
+        <item name="android:paddingBottom">12sp</item>
+    </style>
+    <style name="questionContainnerStyle">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginBottom">10sp</item>
+        <item name="android:paddingTop">20sp</item>
+    </style>
+    <style name="questionNumberStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_bold</item>
+    </style>
+    <style name="questionTextStyle">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/lato_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">-0.0</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="answerTextStyle">
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="listRadioButtonStyle">
+        <item name="android:paddingTop">15sp</item>
+        <item name="android:paddingBottom">15sp</item>
+        <item name="android:paddingLeft">20sp</item>
+        <item name="android:paddingRight">20sp</item>
+        <item name="android:background">@drawable/list_radio_button_background</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="overAllStarRadioButtonStyle">
+        <item name="android:paddingTop">15sp</item>
+        <item name="android:paddingBottom">15sp</item>
+        <item name="android:paddingLeft">20sp</item>
+        <item name="android:paddingRight">20sp</item>
+        <item name="android:background">@drawable/over_all_star_radio_button_background</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/lighter_gray</item> //you can give your color here. that will change all divider color in your app.
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item> // You can change thickness here.
+
+    </style>
+
+    <style name="Divider.Vertical" parent="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>
